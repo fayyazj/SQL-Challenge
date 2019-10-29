@@ -84,5 +84,5 @@ ORDER BY "name count" DESC;
 
 --Epilogue
 SELECT *
-FROM "Employees"
+FROM Employees
 WHERE emp_no = '499942'

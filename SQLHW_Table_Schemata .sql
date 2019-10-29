@@ -66,29 +66,3 @@ CREATE TABLE Titles (
    FOREIGN KEY (emp_no) REFERENCES Employees (emp_no),
    PRIMARY KEY (emp_no,title, from_date)
 );
-
---Copy in CSVs, please keep in mind that I am using my wife's laptop
---for this class and thus her name appears instead of mine for filepath
-COPY department(dept_no,dept_name) 
-FROM '/Users/celiakresser/Documents/GitHub/SQL-Challenge/data/departments.csv' 
-DELIMITER ',' CSV HEADER;
-
-COPY employees(emp_no,birth_date,first_name,last_name,gender,hire_date) 
-FROM '/Users/celiakresser/Documents/GitHub/SQL-Challenge/data/employees.csv' 
-DELIMITER ',' CSV HEADER;
-
-COPY department_employee(emp_no,dept_no,from_date,to_date) 
-FROM '/Users/celiakresser/Documents/GitHub/SQL-Challenge/data/dept_emp.csv' 
-DELIMITER ',' CSV HEADER;
-
-COPY department_manager(dept_no,emp_no,from_date,to_date) 
-FROM '/Users/celiakresser/Documents/GitHub/SQL-Challenge/data/dept_manager.csv' 
-DELIMITER ',' CSV HEADER;
-
-COPY salaries(emp_no,salary,from_date,to_date) 
-FROM '/Users/celiakresser/Documents/GitHub/SQL-Challenge/data/salaries.csv' 
-DELIMITER ',' CSV HEADER;
-
-COPY titles(emp_no,title,from_date,to_date) 
-FROM '/Users/celiakresser/Documents/GitHub/SQL-Challenge/data/titles.csv' 
-DELIMITER ',' CSV HEADER;
